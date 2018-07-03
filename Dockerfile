@@ -1,8 +1,9 @@
-FROM tensorflow/tensorflow:latest-gpu
+FROM tensorflow/tensorflow:latest-gpu-py3
 MAINTAINER asami
 
 RUN apt-get update -y && apt-get upgrade -y && \
 apt-get install -y git \
+build-essential \
 wget \
 curl
 

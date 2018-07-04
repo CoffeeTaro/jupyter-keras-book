@@ -5,7 +5,8 @@ RUN apt-get update -y && apt-get upgrade -y && \
 apt-get install -y git \
 build-essential \
 wget \
-curl
+curl \
+graphviz
 
 RUN pip install keras \
 numpy \
@@ -18,7 +19,12 @@ plotly \
 jupyter \ 
 tqdm \
 cython \
-jupyter_contrib_nbextensions
+jupyter_contrib_nbextensions \
+pydot \
+graphviz \
+pydot3 \
+pydot-ng \
+folium
 
 
 RUN jupyter contrib nbextension install --user && \
